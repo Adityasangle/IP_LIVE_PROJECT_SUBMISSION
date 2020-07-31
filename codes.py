@@ -102,10 +102,10 @@ def get_predictions(path):
     to_pred_events = pd.read_csv(path, encoding= 'unicode_escape')
     recommendations = predict(to_pred_events.Events, employees)
     to_pred_events['Employees'] = recommendations
-    to_pred_events.to_excel('output.xlsx', index=False)
+    to_pred_events.to_excel('result.xlsx', index=False)
 
 
-#Input filename or pathname of csv file to get your predictions. For eg :  Testing_inputs.csv
+#Input filename or pathname of csv file to get your predictions. For eg :  input.csv
 path_for_input=input("ENter path or name of input file")
 get_predictions(path_for_input)
 
